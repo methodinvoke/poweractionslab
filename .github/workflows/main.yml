@@ -52,7 +52,7 @@ jobs:
       with:
         environment-url: ${{secrets.ENVIRONMENTURL}}
         app-id: ${{secrets.APPID}}
-        client-secret-secret: ${{ secrets.CLIENT_SECRET }}
+        client-secret: ${{ secrets.CLIENT_SECRET }}
         tenant-id: ${{ secrets.TENANT_ID }}
         solution-name: ${{ github.event.inputs.solution_name }}
         solution-output-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
