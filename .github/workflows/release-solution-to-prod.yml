@@ -33,9 +33,6 @@ on:
 
 env:
 #edit your values here
-  BUILD_ENVIRONMENT_URL: <BUILDENVIRONMENTURL>
-  PRODUCTION_ENVIRONMENT_URL: <PRODENVIRONMENTURL>
-  USERNAME: <USERNAME>
 
 jobs:
   convert-to-managed:
@@ -58,9 +55,10 @@ jobs:
     - name: Import solution as unmanaged to build env
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
-        environment-url: ${{env.BUILD_ENVIRONMENT_URL}}
-        user-name: ${{env.USERNAME}}
-        password-secret: ${{ secrets.password }}
+        environment-url: ${{secrets.PROD_ENVIRONMENTURL}}
+        app-id: ${{secrets.APPID}}
+        client-secret: ${{ secrets.CLIENT_SECRET }}
+        tenant-id: ${{ secrets.TENANT_ID }}
         solution-file: ${{ github.event.inputs.solution_outbound_folder}}/${{ github.event.inputs.solution_name }}.zip
         force-overwrite: true
         publish-changes: true
@@ -68,9 +66,10 @@ jobs:
     - name: Export solution as managed
       uses: microsoft/powerplatform-actions/export-solution@0.4.0
       with:
-        environment-url: ${{env.BUILD_ENVIRONMENT_URL}}
-        user-name: ${{env.USERNAME}}
-        password-secret: ${{ secrets.password }}
+        environment-url: ${{secrets.PROD_ENVIRONMENTURL}}
+        app-id: ${{secrets.APPID}}
+        client-secret: ${{ secrets.CLIENT_SECRET }}
+        tenant-id: ${{ secrets.TENANT_ID }}
         solution-name: ${{ github.event.inputs.solution_name }}
         managed: true
         solution-output-file: ${{ github.event.inputs.solution_shipping_folder}}/${{ github.event.inputs.solution_name }}.zip
@@ -101,9 +100,10 @@ jobs:
     - name: Import solution to prod env
       uses: microsoft/powerplatform-actions/import-solution@0.4.0
       with:
-        environment-url: ${{env.PRODUCTION_ENVIRONMENT_URL}}
-        user-name: ${{env.USERNAME}}
-        password-secret: ${{ secrets.password }}
+        environment-url: ${{secrets.PROD_ENVIRONMENTURL}}
+        app-id: ${{secrets.APPID}}
+        client-secret: ${{ secrets.CLIENT_SECRET }}
+        tenant-id: ${{ secrets.TENANT_ID }}
         solution-file: ${{ github.event.inputs.solution_release_folder}}/${{ github.event.inputs.solution_name }}.zip
         force-overwrite: true
         publish-changes: true
