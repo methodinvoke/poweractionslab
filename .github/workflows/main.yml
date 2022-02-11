@@ -44,7 +44,7 @@ jobs:
       with:
         environment-url: ${{secrets.ENVIRONMENTURL}}
         app-id: ${{secrets.APPID}}
-        client-secret-secret: ${{ secrets.CLIENT_SECRET }}
+        client-secret: ${{ secrets.CLIENT_SECRET }}
         tenant-id: ${{ secrets.TENANT_ID }}
 
     - name: export-solution action
