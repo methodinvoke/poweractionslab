@@ -7,9 +7,9 @@
     <FormActivationState>1</FormActivationState>
     <form>
       <tabs>
-        <tab verticallayout="true" id="{44a047fc-cf38-40fa-b733-17665c26f0dd}" IsUserDefined="1">
+        <tab verticallayout="true" id="{44a047fc-cf38-40fa-b733-17665c26f0dd}" IsUserDefined="1" name="Shad Phillips">
           <labels>
-            <label description="" languagecode="1033" />
+            <label description="New Label" languagecode="1033" />
           </labels>
           <columns>
             <column width="100%">
@@ -37,11 +37,42 @@
                     </row>
                   </rows>
                 </section>
+                <section name="null_section_3" id="a3c77d82-39d9-4abc-895b-df5e2660e401" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d6c154c9-2e4a-4325-aac9-8dea6480ed5c}" userspacer="true" showlabel="false" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_4" id="0a4a0f00-1f43-4087-95f5-9ca053ad47c5" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell showlabel="false" locklevel="0" id="{8d6c0ac5-8fb4-4ad4-bf93-ff165a4ceef3}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
               </sections>
             </column>
           </columns>
         </tab>
       </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>
