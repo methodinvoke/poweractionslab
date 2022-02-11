@@ -32,7 +32,8 @@ on:
     types: [created]
 
 env:
-#
+  BUILD_ENVIRONMENT_URL: ''
+  PRODUCTION_ENVIRONMENT_URL: ''
 jobs:
   convert-to-managed:
     runs-on: windows-latest
