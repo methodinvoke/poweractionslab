@@ -32,8 +32,7 @@ on:
     types: [created]
 
 env:
-#edit your values here
-
+#
 jobs:
   convert-to-managed:
     runs-on: windows-latest
